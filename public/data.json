@@ -1,0 +1,124 @@
+{
+"orderItems":[
+{"id":"1",
+"fullName":"",
+"address":"",
+"phonenumber":""}],
+"homedata":[
+    {"id":"1",
+    "item":"thumbs up",
+    "price":"20",
+    "tag":"welcomedrink"
+    },{"id":"2",
+    "item":"sprite",
+    "price":"25",
+    "tag":"welcomedrink"
+    },{"id":"3",
+    "item":"mango juice",
+    "price":"30",
+    "tag":"welcomedrink"
+    },{"id":"4",
+    "item":"Lentil Soup",
+    "price":"23",
+    "tag":"soup"
+    },{"id":"5",
+    "item":"Tomato Soup",
+    "price":"98",
+    "tag":"soup"
+    },{"id":"6",
+    "item":"French Onion Soup",
+    "price":"123",
+    "tag":"soup"
+    },{"id":"7",
+    "item":" Summer Asian Slaw",
+    "price":"97",
+    "tag":"salad"
+    },{"id":"8",
+    "item":"Best Broccoli Salad",
+    "price":"99",
+    "tag":"salad"
+    },{"id":"9",
+    "item":"Rainbow Orzo Salad",
+    "price":"23",
+    "tag":"salad"
+    },{"id":"10",
+    "item":"Air Fryer Zucchini Chips",
+    "price":"98",
+    "tag":"starters"
+    },{"id":"11",
+    "item":"Batata Vada",
+    "price":"23",
+    "tag":"starters"
+    },{"id":"12",
+    "item":"Bang Bang Cauliflower",
+    "price":"23",
+    "tag":"starters"
+    },{"id":"13",
+    "item":"Butter Chicken",
+    "price":"98",
+    "tag":"maincourses"
+    },{"id":"14",
+    "item":"Palak Paneer",
+    "price":"34",
+    "tag":"maincourses"
+    },{"id":"15",
+    "item":"Rogan Josh",
+    "price":"234",
+    "tag":"maincourses"
+    },{"id":"16",
+    "item":"Tiramisu",
+    "price":"98",
+    "tag":"dessert"
+    },{"id":"17",
+    "item":"Angel food cake",
+    "price":"10",
+    "tag":"dessert"
+    },{"id":"18",
+    "item":"Apple and butterscotch pie",
+    "price":"98",
+    "tag":"dessert"
+    },{"id":"19",
+    "item":"Quick Noodles",
+    "price":"13",
+    "tag":"Chinese"
+    },{"id":"20",
+    "item":"Spring Rolls",
+    "price":"98",
+    "tag":"Chinese"
+    },{"id":"21",
+    "item":"Shitake Fried Rice with Water Chestnuts",
+    "price":"33",
+    "tag":"Chinese"
+    },{"id":"22",
+    "item":"Pozole",
+    "price":"342",
+    "tag":"mexican"
+    },{"id":"23",
+    "item":"Tostadas",
+    "price":"76",
+    "tag":"mexican"
+    },{"id":"24",
+    "item":"Enchiladas",
+    "price":"10",
+    "tag":"mexican"
+    },{"id":"25",
+    "item":"Lasagna",
+    "price":"23",
+    "tag":"Italian"
+    },{"id":"26",
+    "item":"Ravioli",
+    "price":"65",
+    "tag":"Italian"
+    },{"id":"27",
+    "item":"Ribollita",
+    "price":"12",
+    "tag":"Italian"
+    }
+
+],
+"newitems":[{"id":"1","item":"cken","display":"block","price":200,"count":0,"qut":0,"value":false}]
+
+
+
+
+}
