@@ -1,8 +1,8 @@
 import axios from 'axios';
-import React, { Fragment, useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState} from 'react';
 import {View,Text,Image,Button} from 'react-native-web'
 import {Link, useParams} from 'react-router-native'
-import Comment from './Childs/Comment'
+
 function IndividualPostScreen() {
     const{id}=useParams()
     const[data,setData]=useState([])
@@ -16,14 +16,15 @@ function IndividualPostScreen() {
      }
     },[id])
     useEffect(()=>{getData()},[getData])
+
     return (
         <View style={{width:"100%",height:"100%"}}>
             <View>
             <Link to='/'><Text>Back</Text></Link>
             </View>
        
-       <View style={{width:"100%",flexDirection:'row',justifyContent:'center'}}>   
-       <View style={{width:"90%",flexDirection:'row',justifyContent:'center',boxShadow:'0 0 2px grey',background:'white'}}>
+       <View style={{width:"100%",flexDirection:'row',justifyContent:'center',boxShadow:'0 0 2px grey'}}>   
+       <View style={{width:"90%",flexDirection:'row',justifyContent:'center',background:'white'}}>
         <View style={{flexDirection:'row',justifyContent:'space-around',width:'60%'}}> 
             
             <View>
@@ -43,10 +44,9 @@ function IndividualPostScreen() {
            <View>
             <Text>{data.post}</Text>
            </View>
-           <Fragment>
-            <Comment/>
-           </Fragment>
+          
         </View>
+    
     );
 }
 
