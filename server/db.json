@@ -1,18 +1,6 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Javascript",
-      "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-      "photo": "https://media.istockphoto.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618801?k=20&m=1227618801&s=170667a&w=0&h=Pc_xaak-2cG8pSpHVVbTN3je0BYsxksghZZwzrEuYy4=",
-      "Author": "VenkataHari",
-      "email": "Venkatahari1@yahoo.com",
-      "website": "venkatahari.com",
-      "company": "venk.com",
-      "value": false,
-      "details": "hshsh"
-    },
-    {
       "id": "2",
       "title": "ExpressJs",
       "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
@@ -47,13 +35,50 @@
       "company": "jrntr.com",
       "value": false,
       "details": "ameria"
+    },
+    {
+      "id": "j1OZuS1d1FmlgRD60gz61",
+      "title": "j",
+      "post": "ss",
+      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
+      "Author": "hari charan",
+      "email": "xprogrammer.me@gmail.com",
+      "website": "hari charan",
+      "company": "xprogrammer",
+      "value": false,
+      "details": "hyderabad"
+    },
+    {
+      "id": "puuKfheMwV68KWOqKUYWF",
+      "title": "q",
+      "post": "ee",
+      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
+      "Author": "hari charan",
+      "email": "xprogrammer.me@gmail.com",
+      "website": "hari charan",
+      "company": "xprogrammer",
+      "value": false,
+      "details": "hyderabad"
+    },
+    {
+      "id": "LwT3-Ojvhl0pZnDhcfIno",
+      "title": "k",
+      "post": "",
+      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
+      "Author": "ht",
+      "email": "xprogrammer.me@gmail.com",
+      "website": "kkk",
+      "company": "xprogrammer",
+      "value": false,
+      "details": "hyderabad"
     }
   ],
-  "comments":[{
-    "id":"1",
-    "email":"venkat",
-    "subject":"user1",
-    "post":""
-    }]
- 
+  "comments": [
+    {
+      "id": "1",
+      "email": "venkat",
+      "subject": "user1",
+      "post": ""
+    }
+  ]
 }
