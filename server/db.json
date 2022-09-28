@@ -1,0 +1,67 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Javascript",
+      "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "photo": "https://media.istockphoto.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618801?k=20&m=1227618801&s=170667a&w=0&h=Pc_xaak-2cG8pSpHVVbTN3je0BYsxksghZZwzrEuYy4=",
+      "Author": "VenkataHari",
+      "email": "Venkatahari1@yahoo.com",
+      "website": "venkatahari.com",
+      "company": "venk.com",
+      "value": false,
+      "details": "hshsh"
+    },
+    {
+      "id": "2",
+      "title": "ExpressJs",
+      "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "photo": "https://static.vecteezy.com/system/resources/thumbnails/002/002/300/small_2x/beautiful-woman-avatar-character-icon-free-vector.jpg",
+      "Author": "PawanKalyan",
+      "email": "PawanKalyan@yahoo.com",
+      "website": "pawk.com",
+      "company": "xyz",
+      "value": false,
+      "details": "hyderbad"
+    },
+    {
+      "id": "3",
+      "title": "NodeJs",
+      "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "photo": "https://static.vecteezy.com/system/resources/thumbnails/002/002/427/small/man-avatar-character-isolated-icon-free-vector.jpg",
+      "Author": "MaheshBabu",
+      "email": "MaheshBabu@yahoo.com",
+      "website": "mahesh.com",
+      "company": "yzk",
+      "value": false,
+      "details": "khammam"
+    },
+    {
+      "id": "4",
+      "title": "CSS",
+      "post": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "photo": "https://static.vecteezy.com/system/resources/thumbnails/002/002/341/small_2x/man-wearing-sunglasses-avatar-character-isolated-icon-free-vector.jpg",
+      "Author": "JRNTR",
+      "email": "JRNTR@yahoo.com",
+      "website": "jrntr.com",
+      "company": "jrntr.com",
+      "value": false,
+      "details": "ameria"
+    }
+  ],
+  "comments":[{
+    "id":"1",
+    "Subject":"Loream ipsum dak jdhs,conscert",
+    "email":"Venkatahari1@yahoo.com",
+    "photo":"https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=",
+    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing eli"
+  },
+  {
+    "id":"2",
+    "Subject":"Loream ipsum dak jdhs,conscert",
+    "email":"hari1@yahoo.com",
+    "photo":"https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=",
+    "body":"Lorem ipsum dolor sit amet, consectetur adipiscing eli"
+  }
+]
+}

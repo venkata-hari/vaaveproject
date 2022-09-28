@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAC,EAAE,EAAC,EAAE,CAAC,EAAE,CAAA;EACP,MAAM,EAAC,cAAc;EACrB,UAAU,EAAE,MAAM;CACrB;;AACD,AAAI,EAAF,CAAE,EAAE,AAAA,UAAW,CAAA,CAAC,GAAlB,EAAE,CAAkB,EAAE,AAAA,UAAW,CAAA,CAAC,GAAlC,EAAE,CAAkC,EAAE,AAAA,UAAW,CAAA,CAAC,EAAC;EAC/C,KAAK,EAAC,KAAK;CACd",
-    "sources": [
-        "iconfood.scss"
-    ],
-    "names": [],
-    "file": "iconfood.css"
-}
