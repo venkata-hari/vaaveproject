@@ -5,7 +5,7 @@ function Comment() {
       <View style={{width:"100%",position:"relative"}}>
         <View style={{flexDirection:'row',justifyContent:'space-between'}}>
             <Button title="Comment" color="red"/>
-            <Text>lll</Text>
+            <Text></Text>
            </View>
 
            <View style={{marginLeft:"2%",background:"white",boxShadow:'0 0 1000px blue',flexDirection:'row',justifyContent:'center',position:'fixed',top:'5%',width:'96%',zIndex:900}}>
