@@ -70,9 +70,9 @@ const f1=(text)=>{
            	<View key={x.id} style={{background:"white",flexDirection:"row",boxShadow:"0 0 3px grey",marginTop:"20px",width:"96%",height:"100%"}}>
                
                <View style={{width:"30%",flexDirection:"row",justifyContent:"center"}}>
-               <Link to={{pathname:`${x.id}`}}>
-                <Image source={{uri:x.photo}} style={{width:100 ,height:100}}/>
-                </Link>
+              
+                <Image source={{uri:x.photo}} style={{width:100 ,height:100}} onPress={()=>f1(x)}/>
+              
                </View>
               
               
