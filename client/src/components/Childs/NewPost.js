@@ -14,7 +14,8 @@ function NewPost() {
     website:"",
     company:"",
     value:false,
-    details:""
+    details:"",
+    comments:""
 
   })
   const inputSubmit=(e)=>{
@@ -37,7 +38,8 @@ function NewPost() {
         website:post.website,
         company:post.company,
         value:post.value,
-        details:post.details
+        details:post.details,
+        comments:post.comments
 
     }
     const res=await axios.post("http://localhost:5000/posts",req)

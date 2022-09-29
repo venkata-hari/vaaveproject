@@ -54,11 +54,7 @@ function IndividualPostScreen() {
         </View>
 
         <View>
-        {Comment.map(x=>
-            <View key={x.id}>
-                <Text>{x.name}</Text>
-            </View>
-            )}
+  
         </View>
         </Store.Provider>
     );

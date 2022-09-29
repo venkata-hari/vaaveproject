@@ -11,7 +11,7 @@
       "company": "xyz",
       "value": false,
       "details": "hyderbad",
-      "comments":[{"id":"1","name":"hari"}]
+      "comments": ""
     },
     {
       "id": "2",
@@ -24,7 +24,7 @@
       "company": "yzk",
       "value": false,
       "details": "khammam",
-      "comments":[{"id":"1","name":"sari"}]
+      "comments": ""
     },
     {
       "id": "3",
@@ -37,68 +37,7 @@
       "company": "jrntr.com",
       "value": false,
       "details": "ameria",
-      "comments":[{"id":"1","name":"ari"}]
-    },
-    {
-      "id": "LwT3-Ojvhl0pZnDhcfIno",
-      "title": "k",
-      "post": "",
-      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
-      "Author": "ht",
-      "email": "xprogrammer.me@gmail.com",
-      "website": "kkk",
-      "company": "xprogrammer",
-      "value": false,
-      "details": "hyderabad",
-      "comments":[{"id":"1","name":"s"},{"id":"2","name":"s"},{"id":"3","name":"s"}]
-    },
-    {
-      "id": "gqyvOpJJs2QncJ0ucUjf4",
-      "title": "jsjsj",
-      "post": "",
-      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
-      "Author": "dl;sl",
-      "email": "';d';'",
-      "website": "'q",
-      "company": "as",
-      "value": false,
-      "details": "a''"
-    },
-    {
-      "id": "JEI0_brhFeKaA-xVbUHeg",
-      "title": "jsjsj",
-      "post": "",
-      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
-      "Author": "dl;sl",
-      "email": "';d';'",
-      "website": "'q",
-      "company": "as",
-      "value": false,
-      "details": "a''"
-    },
-    {
-      "id": "g-Kgf7sJzLorKyXrDQ_Zy",
-      "title": "jsjsj",
-      "post": "",
-      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
-      "Author": "dl;sl",
-      "email": "';d';'",
-      "website": "'q;",
-      "company": "as",
-      "value": false,
-      "details": "a''"
-    },
-    {
-      "id": "PGWXziDkFT5Tj5xS14IYR",
-      "title": "hsgs",
-      "post": "",
-      "photo": "https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
-      "Author": "hari charan",
-      "email": "xprogrammer.me@gmail.com",
-      "website": "hari charan",
-      "company": "xprogrammer",
-      "value": false,
-      "details": "hyderabad"
+      "comments": ""
     }
   ]
 }
