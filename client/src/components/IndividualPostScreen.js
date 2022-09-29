@@ -8,8 +8,8 @@ function IndividualPostScreen() {
     const{id}=useParams()
     const[data,setData]=useState([])
     const[NewData,setNewData]=useState([])
-    const[Comment,setComment]=useState({
-        comments:[]
+    const[UserComment,setUserComment]=useState({
+        comment:''
     })
     const getData=useCallback(async()=>{
      try{
@@ -21,9 +21,11 @@ function IndividualPostScreen() {
      }
     },[id])
     useEffect(()=>{getData()},[getData])
+    
     useEffect(()=>{
     async function getData(){
-try{const res=await axios.get("http://localhost:5000/posts")
+   try{
+    const res=await axios.get("http://localhost:5000/comments")
    setNewData(res.data)}
    catch(error){
     console.log(error)
@@ -34,34 +36,24 @@ const inputSubmit=(e)=>{
     e.preventDefault()
     const Name=e.target.getAttribute('name')
     const Value=e.target.value
-    const NewIndex={...Comment}
+    const NewIndex={...UserComment}
     NewIndex[Name]=Value
-    setComment(NewIndex)
+    setUserComment(NewIndex)
 }
 const formSubmit=async(e)=>{
         e.preventDefault()
         const req={
             id:nanoid(),
-            comments:[{...Comment,comments:Comment.comments}],
+            comment:UserComment.comment
         }
-        const res=await axios.post(`http://localhost:5000/posts`,req)
-        const newIndex=[...data,res.data]
-        setData(newIndex)
+        const res=await axios.post(`http://localhost:5000/comments/${id}`,req)
+        const newIndex=[...NewData,res.data]
+        setNewData(newIndex)
     }
 
     return (
-<Store.Provider value={{Comment,setComment}}>
-    <Fragment>
-        <form onSubmit={formSubmit}>
-            <input type='text' name="comments" onChange={inputSubmit}/>
-            <button type="submit">Add</button>
-        </form>
-        {NewData.map(x=>
-        <div key={x.id}>
-        {x.comment}          
-        </div>)}
-            
-    </Fragment>
+<Store.Provider value={{UserComment,setUserComment}}>
+
         <View style={{width:"100%",height:"100%"}}>
             <View>
             <Link to='/'><Text>Back</Text></Link>
@@ -76,9 +68,9 @@ const formSubmit=async(e)=>{
             </View>
             
             <View>
-            <Text style={{fontSize:"20px",fontWeight:500,height:"30%"}}>{data.Author}</Text>
+            <Text style={{fontSize:"20px",textAlign:"center",fontWeight:500,height:"30%"}}>{data.author}</Text>
             <Text style={{height:"30%",textAlign:"center"}}>{data.title}</Text>
-           <Button title="UserDetails" style={{height:"40%"}}/>
+           <Button title="Follow" style={{height:"40%"}}/>
             </View>
             
            </View>

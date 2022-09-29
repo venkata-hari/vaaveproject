@@ -6,6 +6,7 @@ import NewPost from './Childs/NewPost'
 export const Store=createContext(null)
 function Screen1() {
     const[data,setData]=useState([])
+    const[Search,setSearch]=useState('')
     const[Value,setValue]=useState(false)
     useEffect(()=>{
         async function getData(){
@@ -37,41 +38,36 @@ const userDelete=(id)=>{
     axios.delete(`http://localhost:5000/posts/${id}`)
     
         setData(data.filter(x=>x.id!==id))
-        return true
-    
 
 }
-const f1=(text)=>{
-    const updatedList= data.filter((img)=>{
-       return img.Author.toLowerCase().includes(text.toLowerCase())
-   })
-   
-     setData(updatedList)
-     }
+
+
+
     return (
         <Store.Provider value={{setValue,data,setData}}>
             {Value?(<NewPost/>):(<View></View>)}
         <View>
-    <View style={{flexDirection:"row",justifyContent:"center"}}>
+        <View style={{flexDirection:"row",justifyContent:"center"}}>
         <View style={{background:"#f5f5ff",borderRadius:"5px",color:"black",flexDirection:"row",justifyContent:"space-between",width:"96%",border:"1px solid #8b797966"}}>
         <TextInput 
-        onChangeText={f1} style={{width:"80%",outline:"none",padding:"3px"}}/>
-       <Text>&#x1F50E;&#xFE0E;</Text>
-       
+         style={{width:"80%",outline:"none",padding:"3px"}}
+         onChangeText={(Search)=>setSearch(Search)}
+         />
+       <Button title="search"/>
         </View>
-        </View>
+        </View>  
        <View>
        <View style={{width:'15%',marginTop:"2%"}}>
         <Button title="New +" color="green" onPress={setOpen}/>
        </View>
 
         <View style={{width:"100%",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
-          {data.map((x)=>{return(
+          {data.filter((x)=>x.title.toLowerCase().includes(Search)).map((x)=>{return(
            	<View key={x.id} style={{background:"white",flexDirection:"row",boxShadow:"0 0 3px grey",marginTop:"20px",width:"96%",height:"100%"}}>
                
                <View style={{width:"30%",flexDirection:"row",justifyContent:"center"}}>
               
-                <Image source={{uri:x.photo}} style={{width:100 ,height:100}} onPress={()=>f1(x)}/>
+                <Image source={{uri:x.photo}} style={{width:100 ,height:100}} />
               
                </View>
               
@@ -86,7 +82,7 @@ const f1=(text)=>{
                 </Link> 
                    <View style={{padding:"10px",height:"50%",flexDirection:"row",justifyContent:"space-around"}}>
                     <Text style={{fontWeight:"500",color:"blue",fontSize:"15px"}}>UserName:</Text>
-                   <Text style={{fontWeight:"500"}}>{x.Author}</Text>
+                   <Text style={{fontWeight:"500"}}>{x.author}</Text>
                    </View>
                  
                </View>

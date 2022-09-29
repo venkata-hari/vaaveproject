@@ -9,7 +9,7 @@ function NewPost() {
     title:"",
     post:"",
     photo:"https://media.istockphoto.com/vectors/avatar-5-vector-id1131164548?k=20&m=1131164548&s=170667a&w=0&h=VlwTJ3LpA8Pjzk9u8XYgkII0Vrvrb07e67cHALFX_aY=",
-    Author:"",
+    author:"",
     email:"",
     website:"",
     company:"",
@@ -33,7 +33,7 @@ function NewPost() {
         title:post.title,
         post:post.post,
         photo:post.photo,
-        Author:post.Author,
+        author:post.author,
         email:post.email,
         website:post.website,
         company:post.company,
@@ -51,7 +51,7 @@ function NewPost() {
         <Fragment>
     <form style={{position:"fixed",width:"100%",zIndex:900}} onSubmit={formSubmit}>
     <input type="text"  required="required" name="title" placeholder='Enter Title'  onChange={inputSubmit}/><br/>
-    <input type="text"  required="required" name="Author" placeholder='Enter Your Name' onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="author" placeholder='Enter Your Name' onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="email" placeholder='Enter Your email' onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="website" placeholder='Enter Your Wesite' onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="company" placeholder='Enter Post Company Name' onChange={inputSubmit}/><br/>

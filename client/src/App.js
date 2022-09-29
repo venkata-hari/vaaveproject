@@ -9,8 +9,7 @@ function App() {
 
 
         <NativeRouter>
-        <Routes>   
-             
+        <Routes>          
         <Route exact path='/' element={<Screen1/>}/>  
         <Route path='/:id' element={<Screen2/>}/>  
         </Routes>
