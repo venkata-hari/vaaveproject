@@ -1,6 +1,5 @@
 import React, { Fragment,useContext,useState } from 'react';
 import {Store} from '../PostsListScreen'
-import { TextField } from '@mui/material';
 import {nanoid} from 'nanoid'
 import axios from 'axios';
 function NewPost() {
@@ -49,12 +48,12 @@ function NewPost() {
     return (
         <Fragment>
     <form style={{position:"fixed",width:"100%",zIndex:900}} onSubmit={formSubmit}>
-    <TextField fullWidth label="fullWidth" id="fullWidth"  required="required" name="title" placeholder='Enter Title'  onChange={inputSubmit}/><br/>
-    <TextField fullWidth label="fullWidth" id="fullWidth"  required="required" name="Author" placeholder='Enter Your Name' onChange={inputSubmit}/><br/>
-    <TextField fullWidth label="fullWidth" id="fullWidth"  required="required" name="email" placeholder='Enter Your email' onChange={inputSubmit}/><br/>
-    <TextField fullWidth label="fullWidth" id="fullWidth"  required="required" name="website" placeholder='Enter Your Wesite' onChange={inputSubmit}/><br/>
-    <TextField fullWidth label="fullWidth" id="fullWidth"  required="required" name="company" placeholder='Enter Post Company Name' onChange={inputSubmit}/><br/>
-    <TextField fullWidth label="fullWidth" id="fullWidth"  required="required" name="details" placeholder='Enter Your Address' onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="title" placeholder='Enter Title'  onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="Author" placeholder='Enter Your Name' onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="email" placeholder='Enter Your email' onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="website" placeholder='Enter Your Wesite' onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="company" placeholder='Enter Post Company Name' onChange={inputSubmit}/><br/>
+    <input type="text"  required="required" name="details" placeholder='Enter Your Address' onChange={inputSubmit}/><br/>
     <textarea name="post" onChange={inputSubmit}></textarea><br/>
       <button type="submit">Submit</button>
             </form>

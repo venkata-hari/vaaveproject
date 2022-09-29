@@ -6,7 +6,6 @@ import NewPost from './Childs/NewPost'
 export const Store=createContext(null)
 function Screen1() {
     const[data,setData]=useState([])
-    const[query,setQuery]=useState('')
     const[Value,setValue]=useState(false)
     useEffect(()=>{
         async function getData(){
@@ -42,6 +41,13 @@ const userDelete=(id)=>{
     
 
 }
+const f1=(text)=>{
+    const updatedList= data.filter((img)=>{
+       return img.Author.toLowerCase().includes(text.toLowerCase())
+   })
+   
+     setData(updatedList)
+     }
     return (
         <Store.Provider value={{setValue,data,setData}}>
             {Value?(<NewPost/>):(<View></View>)}
@@ -49,7 +55,7 @@ const userDelete=(id)=>{
     <View style={{flexDirection:"row",justifyContent:"center"}}>
         <View style={{background:"#f5f5ff",borderRadius:"5px",color:"black",flexDirection:"row",justifyContent:"space-between",width:"96%",border:"1px solid #8b797966"}}>
         <TextInput 
-        onChangeText={text=>setQuery(text)} style={{width:"80%",outline:"none",padding:"3px"}}/>
+        onChangeText={f1} style={{width:"80%",outline:"none",padding:"3px"}}/>
        <Text>&#x1F50E;&#xFE0E;</Text>
        
         </View>
