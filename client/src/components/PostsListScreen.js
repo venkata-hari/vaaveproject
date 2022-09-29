@@ -50,8 +50,9 @@ const userDelete=(id)=>{
         <View style={{flexDirection:"row",justifyContent:"center"}}>
         <View style={{background:"#f5f5ff",borderRadius:"5px",color:"black",flexDirection:"row",justifyContent:"space-between",width:"96%",border:"1px solid #8b797966"}}>
         <TextInput 
-         style={{width:"80%",outline:"none",padding:"3px"}}
+         style={{width:"80%",outline:"none",padding:"3px",textAlign:'center'}}
          onChangeText={(Search)=>setSearch(Search)}
+         placeholder="Search User Name"
          />
        <Button title="search"/>
         </View>
@@ -62,7 +63,7 @@ const userDelete=(id)=>{
        </View>
 
         <View style={{width:"100%",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
-          {data.filter((x)=>x.title.toLowerCase().includes(Search)).map((x)=>{return(
+          {data.filter((x)=>x.author.toLowerCase().includes(Search)).map((x)=>{return(
            	<View key={x.id} style={{background:"white",flexDirection:"row",boxShadow:"0 0 3px grey",marginTop:"20px",width:"96%",height:"100%"}}>
                
                <View style={{width:"30%",flexDirection:"row",justifyContent:"center"}}>

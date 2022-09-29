@@ -14,8 +14,6 @@ function NewPost() {
     website:"",
     company:"",
     value:false,
-    details:"",
-    comments:""
 
   })
   const inputSubmit=(e)=>{
@@ -38,8 +36,6 @@ function NewPost() {
         website:post.website,
         company:post.company,
         value:post.value,
-        details:post.details,
-        comments:post.comments
 
     }
     const res=await axios.post("http://localhost:5000/posts",req)
@@ -48,16 +44,15 @@ function NewPost() {
     setValue(false)
   }
     return (
-        <Fragment>
-    <form style={{position:"fixed",width:"100%",zIndex:900}} onSubmit={formSubmit}>
+    <Fragment>
+    <form  onSubmit={formSubmit}>
     <input type="text"  required="required" name="title" placeholder='Enter Title'  onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="author" placeholder='Enter Your Name' onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="email" placeholder='Enter Your email' onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="website" placeholder='Enter Your Wesite' onChange={inputSubmit}/><br/>
     <input type="text"  required="required" name="company" placeholder='Enter Post Company Name' onChange={inputSubmit}/><br/>
-    <input type="text"  required="required" name="details" placeholder='Enter Your Address' onChange={inputSubmit}/><br/>
     <textarea name="post" onChange={inputSubmit}></textarea><br/>
-      <button type="submit">Submit</button>
+    <button type="submit">Submit</button>
             </form>
             
         </Fragment>

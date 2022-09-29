@@ -6,12 +6,11 @@ import{NativeRouter,Routes,Route} from 'react-router-native'
 function App() {
     return (
         <View>
-
-
-        <NativeRouter>
+       <NativeRouter>
         <Routes>          
-        <Route exact path='/' element={<Screen1/>}/>  
+        <Route exact path='/' element={<Screen1/>}/>
         <Route path='/:id' element={<Screen2/>}/>  
+     
         </Routes>
         </NativeRouter>
       
