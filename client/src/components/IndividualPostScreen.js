@@ -34,7 +34,7 @@ const inputSubmit=(e)=>{
     e.preventDefault()
     const Name=e.target.getAttribute('name')
     const Value=e.target.value
-    const NewIndex={...Comment,comments:[{...Comment.comments}]}
+    const NewIndex={...Comment}
     NewIndex[Name]=Value
     setComment(NewIndex)
 }
@@ -42,7 +42,7 @@ const formSubmit=async(e)=>{
         e.preventDefault()
         const req={
             id:nanoid(),
-            comments:[{...Comment.comments}],
+            comments:[{...Comment,comments:Comment.comments}],
         }
         const res=await axios.post(`http://localhost:5000/posts`,req)
         const newIndex=[...data,res.data]
