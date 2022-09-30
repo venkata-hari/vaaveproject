@@ -1,13 +1,14 @@
 import axios from 'axios';
-import React, { createContext, useEffect, useState } from 'react';
-import {View,Text,Image,TextInput,Button} from 'react-native-web'
+import React, { createContext, useEffect, useState ,Fragment} from 'react';
+import {View,Text,Image,TextInput,Button,TouchableHighlight} from 'react-native-web'
 import {Link} from 'react-router-native'
 import NewPost from './Childs/NewPost'
 export const Store=createContext(null)
 function Screen1() {
     const[data,setData]=useState([])
-    const[Search,setSearch]=useState('')
-    const[Value,setValue]=useState(false)
+    const[Search,setSearch]=useState(data)
+    const[Value,setValue]=useState(true)
+    const[Del,setDel]=useState(false)
     useEffect(()=>{
         async function getData(){
             try{
@@ -20,37 +21,48 @@ function Screen1() {
 
         }getData()
     },[])
-const userView=(e)=>{
-const Find=data.find(x=>x.id===e.id)
-    if(Find.value===false){
-    setData(data.map(x=>x.id===e.id?
-        {...x,value:true}:x))
-}
-else if(Find.value===true){
-    setData(data.map(x=>x.id===e.id?
-        {...x,value:false}:x))
-}
-}
+
+
 const setOpen=()=>{
-    setValue(true)
+    setValue(false)
 }
-const userDelete=(id)=>{
+const FollowButton=(e)=>{
+    const z=data.find(x=>x.id===e.id)
+    if(z.Follow==="Follow"){
+    setData(data.map(x=>x.id===e.id?{...x,Follow:"Following"}:x))}
+    else if(z.Follow==="Following"){
+        setData(data.map(x=>x.id===e.id?{...x,Follow:"Follow"}:x)) 
+    }
+}
+
+const LikeButton=(e)=>{
+setData(data.map(x=>x.id===e.id?{...x,color:"red",count:x.count+1}:x))
+}
+const DeletePost=(id)=>{
     axios.delete(`http://localhost:5000/posts/${id}`)
-    
-        setData(data.filter(x=>x.id!==id))
-
+    setData(data.filter(x=>x.id!==id))
+    setDel(false)
 }
-
-
+const dot=()=>{
+    setDel(true)
+}
 
     return (
         <Store.Provider value={{setValue,data,setData}}>
-            {Value?(<NewPost/>):(<View></View>)}
-        <View>
+     <View style={{width:"100%",height:"7vh",borderBottom:"1px solid #80808036",padding:'3px',marginBottom:"3%",flexDirection:"row",justifyContent:"center",position:"fixed",zIndex:900,top:0,background:'white'}}>
+        <View style={{flexDirection:"row"}}>
+        <Image source={{uri:"https://i.pinimg.com/736x/0d/cf/b5/0dcfb548989afdf22afff75e2a46a508.jpg"}} style={{width:30,height:30}}/>
+        <Text style={{color:"grey"}}>VaaveProject</Text>
+        </View>
+        
+       
+     </View>
+            {Value?(
+        <View style={{marginTop:"15%"}}>
         <View style={{flexDirection:"row",justifyContent:"center"}}>
         <View style={{background:"#f5f5ff",borderRadius:"5px",color:"black",flexDirection:"row",justifyContent:"space-between",width:"96%",border:"1px solid #8b797966"}}>
         <TextInput 
-         style={{width:"80%",outline:"none",padding:"3px",textAlign:'center'}}
+         style={{width:"80%",outline:"none",padding:"3px",color:"grey"}}
          onChangeText={(Search)=>setSearch(Search)}
          placeholder="Search User Name"
          />
@@ -58,53 +70,48 @@ const userDelete=(id)=>{
         </View>
         </View>  
        <View>
-       <View style={{width:'15%',marginTop:"2%"}}>
+       <View style={{width:'25%',marginTop:"2%",padding:"1%"}}>
         <Button title="New +" color="green" onPress={setOpen}/>
        </View>
 
-        <View style={{width:"100%",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
-          {data.filter((x)=>x.author.toLowerCase().includes(Search)).map((x)=>{return(
-           	<View key={x.id} style={{background:"white",flexDirection:"row",boxShadow:"0 0 3px grey",marginTop:"20px",width:"96%",height:"100%"}}>
-               
-               <View style={{width:"30%",flexDirection:"row",justifyContent:"center"}}>
-              
-                <Image source={{uri:x.photo}} style={{width:100 ,height:100}} />
-              
-               </View>
-              
-              
-               
-               <View style={{borderLeft:"1px solid grey",width:"60%"}}>
-               <Link to={{pathname:`/${x.id}`}} style={{textDecoration:'none'}}>
-                   <View style={{padding:"10px",borderBottom:"1px solid grey",flexDirection:"row",justifyContent:"space-around"}}>
-                    <Text style={{fontWeight:"500",color:"blue",fontSize:"15px"}}>PostTitle:</Text>
-                    <Text style={{fontWeight:"500"}}>{x.title}</Text>
-                    </View>
-                </Link> 
-                   <View style={{padding:"10px",height:"50%",flexDirection:"row",justifyContent:"space-around"}}>
-                    <Text style={{fontWeight:"500",color:"blue",fontSize:"15px"}}>UserName:</Text>
-                   <Text style={{fontWeight:"500"}}>{x.author}</Text>
-                   </View>
-                 
-               </View>
-             
-               <View style={{borderLeft:"1px solid grey",width:"10%"}}>
-               <View style={{height:"50%"}}>
-                {x.value?
-                (<Text  style={{background:"green",color:"white",fontSize:"35px",borderBottom:"1px solid grey",textAlign:"center"}}></Text>):
-                (<Text style={{background:"red",color:"white",fontSize:"35px",borderBottom:"1px solid grey",textAlign:"center"}} onPress={()=>userDelete(x.id)}>🗑</Text>)
+        <View style={{width:"100%", flexDirection: "row",flexWrap:"wrap",justifyContent:"center"}}>
+          {data.filter((y)=>y.author.toLowerCase().includes(Search)).map((x)=>{return(
+           	<View key={x.id} style={{width:"95%",boxShadow:"0 0 2px grey",marginTop:'2%',padding:'4%'}}>
+            <View style={{flexDirection:"row",justifyContent:"space-between",}}>
+            <Text></Text>
+           
+            <View>
+                {Del?
+            (<Button title="X" color="red" onPress={()=>DeletePost(x.id)}/>):(
+                <TouchableHighlight onPress={() => dot()}>
+            <Image source={{uri:x.dot}} style={{width:30,height:10}} />
+            </TouchableHighlight>
+            )
                 }
-                </View>
-               <Text style={{height:"50%",textAlign:"center",fontSize:"30px",color:"white",background:"black"}} onPress={()=>userView(x)}>&#128065;</Text>
+            </View>
+            </View>
+            
+                <View style={{flexDirection:'row'}}>
+                <Link to={{pathname:`/${x.id}`}} style={{textDecoration:'none'}}><Image source={{uri:x.photo}} style={{width:40,height:40}}/></Link>
+                <Link to={{pathname:`/${x.id}`}} style={{textDecoration:'none',marginLeft:'1%',marginRight:'4%'}}><Text>{x.author}</Text></Link>    
+                  <Text style={{color:'#4285F4',fontWeight:600,marginLeft:"2%"}} onPress={()=>FollowButton(x)}>. {x.Follow}</Text>
                </View>
-           </View>
-)})}
+            <View>
+                <Text>{x.title}:</Text><Link to={{pathname:`/${x.id}`}} style={{textDecoration:'none'}}>
+                <Image source={{uri:x.post}} style={{width:"100%",height:"30vh"}}/></Link>
+                <View style={{flexDirection:"row"}}>
+                <Text style={{fontSize:"34px",color:x.color}} onPress={()=>LikeButton(x)} >&#9825;</Text>
+               <Text style={{fontSize:"15px",marginTop:"3%",marginLeft:"2%"}}>{x.count}</Text>
+               </View>
+            </View>
+            </View>)})}
         </View>
         <View>
             
         </View>
        </View> 
-       </View>
+       </View>):(<Fragment> <NewPost/></Fragment>
+      )}
        </Store.Provider>
     );
 }
